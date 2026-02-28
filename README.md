@@ -2,13 +2,11 @@
 
 ## Initialize git repository
 
-Command to initialize a git repository:
-
 ```bash
 git init
 ```
 
-Set up git user name and email:
+Set up project-specific Git identity:
 
 ```bash
 git config --local user.name "Your Name"
@@ -25,6 +23,23 @@ VS Code users:
 
 ```bash
 mkdir -p .vscode && touch .vscode/settings.json
+```
+
+## First commit and push
+
+Stage and commit locally:
+
+```bash
+git add .
+git commit -m "chore: initial commit"
+```
+
+Create an empty repository on GitHub first, then push your initial commit:
+
+```bash
+git remote add origin git@github.com:your-account/<your-project-name>.git
+git branch -M main
+git push -u origin main
 ```
 
 ## Conventional workflow
