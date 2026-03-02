@@ -16,7 +16,7 @@ git config --local user.email "your.email@example.com"
 ## Create essential files
 
 ```bash
-touch README.md Makefile .gitignore 
+touch README.md Makefile .gitignore
 ```
 
 ### VS Code integration
@@ -41,6 +41,22 @@ git remote add origin git@github.com:your-account/<your-project-name>.git
 git branch -M main
 git push -u origin main
 ```
+
+## Set up Git hooks
+
+Install Lefthook if you haven't already:
+
+```bash
+go install github.com/evilmartians/lefthook@latest
+```
+
+Set up Git hooks with Lefthook:
+
+```bash
+lefthook install
+```
+
+Hook config lives in `lefthook.yml`.
 
 ### VS Code integration
 Install **GitLens** and **Git Graph** extensions for advanced Git UI.

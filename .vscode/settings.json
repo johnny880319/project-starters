@@ -1,4 +1,8 @@
 {
+  // general
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
 // python
   "notebook.output.scrolling": true,
   "[python]": {
@@ -8,6 +12,7 @@
       "source.fixAll": "explicit"
     }
   },
+
 // go
   "[go]": {
     "editor.defaultFormatter": "golang.go",
@@ -23,5 +28,6 @@
     "gofumpt": true,
     "ui.semanticTokens": true
   }
+
 // typescript
 }

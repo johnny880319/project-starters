@@ -1,0 +1,44 @@
+pre-commit:
+  parallel: true
+  commands:
+    # python
+    python-lint:
+      root: "python/"
+      glob: "**/*.py"
+      run: uv run ruff check --fix {staged_files}
+      stage_fixed: true
+    python-format:
+      root: "python/"
+      glob: "**/*.py"
+      run: uv run ruff format {staged_files}
+      stage_fixed: true
+
+    # go
+    go-lint:
+      root: "go/"
+      glob: "**/*.go"
+      run: golangci-lint run
+      stage_fixed: true
+
+pre-push:
+  parallel: true
+  commands:
+    # python
+    python-typecheck:
+      root: "python/"
+      glob: "**/*.py"
+      run: uv run pyright
+    python-test:
+      root: "python/"
+      glob: "**/*.py"
+      run: uv run pytest
+
+    # go
+    go-build:
+      root: "go/"
+      glob: "**/*.go"
+      run: go vet ./...
+    go-test:
+      root: "go/"
+      glob: "**/*.go"
+      run: go test -short ./...
