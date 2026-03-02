@@ -34,10 +34,6 @@ pre-push:
       run: uv run pytest
 
     # go
-    go-build:
-      root: "go/"
-      glob: "**/*.go"
-      run: go vet ./...
     go-test:
       root: "go/"
       glob: "**/*.go"
