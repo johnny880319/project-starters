@@ -100,6 +100,22 @@ go test -v ./...
 go test -cover ./...
 ```
 
+## Dockerfile (Podman/Docker)
+
+This template includes `go/Dockerfile` and `go/.dockerignore`.
+
+```bash
+# Build from repository root
+podman build -f go/Dockerfile -t my-go-app ./go
+
+# Run
+podman run --rm my-go-app
+```
+
+Notes:
+- This starter app is CLI-style, so `EXPOSE` is intentionally not enabled by default.
+- Add `EXPOSE <port>` only when your app actually listens on that port.
+
 ## Live reloading (optional)
 
 Use [Air](https://github.com/air-verse/air) for local live reload:

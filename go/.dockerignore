@@ -1,0 +1,7 @@
+.git
+.github
+.vscode
+.cache
+bin
+dist
+coverage.out
