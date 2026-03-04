@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 
 # Build stage
-FROM golang:1.25-alpine AS builder
+FROM docker.io/library/golang:1.25-alpine AS builder
 
 RUN apk --no-cache add ca-certificates
 # If your app depends on local timezone data, install tzdata here.

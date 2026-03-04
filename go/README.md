@@ -103,13 +103,13 @@ go test -cover ./...
 ## Dockerfile (Podman/Docker)
 
 This template includes `go/Dockerfile` and `go/.dockerignore`.
+Run these commands from the `go/` directory:
 
 ```bash
-# Build from repository root
-podman build -f go/Dockerfile -t my-go-app ./go
+podman build -t localhost/my-go-app .
 
 # Run
-podman run --rm my-go-app
+podman run --rm localhost/my-go-app
 ```
 
 Notes:
