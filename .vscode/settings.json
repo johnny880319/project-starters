@@ -1,33 +1,36 @@
 {
-  // general
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-
-// python
-  "notebook.output.scrolling": true,
-  "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
+    // general
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "notebook.output.scrolling": true,
     "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "explicit"
+    // python
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit"
+        }
+    },
+    // go
+    "[go]": {
+        "editor.defaultFormatter": "golang.go",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "go.lintOnSave": "package",
+    "go.lintTool": "golangci-lint",
+    "go.toolsManagement.autoUpdate": true,
+    "gopls": {
+        "gofumpt": true,
+        "ui.semanticTokens": true
+    },
+    // typescript
+    "[typescript][typescriptreact]": {
+        "editor.defaultFormatter": "biomejs.biome",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.biome": "explicit",
+            "source.organizeImports.biome": "explicit"
+        },
     }
-  },
-
-// go
-  "[go]": {
-    "editor.defaultFormatter": "golang.go",
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
-  },
-  "go.lintOnSave": "package",
-  "go.lintTool": "golangci-lint",
-  "go.toolsManagement.autoUpdate": true,
-  "gopls": {
-    "gofumpt": true,
-    "ui.semanticTokens": true
-  }
-
-// typescript
 }
